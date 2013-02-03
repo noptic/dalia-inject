@@ -1,0 +1,13 @@
+{
+    "name": "dalia-it/dalia-inject",
+    "description": "Turns arrays intpo objects and vice verse. Provides a single interface and a pseudo trait to implement models.",
+    "authors": [
+        {
+            "name": "Oliver Anan",
+            "email": "oliver@ananit.de"
+        }
+    ],
+    "require": {
+
+    }
+}
