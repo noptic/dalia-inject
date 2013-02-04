@@ -1,2 +1,4 @@
-/vendor/
+.c9revisions
+*.local.*
+vendor
 composer.phar
