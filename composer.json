@@ -1,6 +1,10 @@
 {
     "name": "dalia-it/dalia-inject",
     "description": "Turns arrays intpo objects and vice verse. Provides a single interface and a pseudo trait to implement models.",
+    "license":  "MIT",
+    "autoload": {
+        "psr-0": { "daliaIT\\dalia\\inject": "src/" }
+    },
     "authors": [
         {
             "name": "Oliver Anan",
@@ -8,6 +12,20 @@
         }
     ],
     "require": {
-
+        "dalia-it/rough": "v0.0.1-alpha1"
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "extra":{
+        "dalia-it":{
+            "rough":{
+                "build":{
+                    "source": "src/",
+                    "output": "src/"
+                }
+            }
+        }
     }
 }

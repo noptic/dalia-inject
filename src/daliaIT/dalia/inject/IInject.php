@@ -8,12 +8,12 @@ tags:       [injection, factory]
 ================================================================================
 IInject
 ================================================================================
-Required to craete class instnaces from arrays and vice versa.
+Required to create class instances from arrays and vice versa.
 
 Usage
 --------------------------------------------------------------------------------
 This interface is intended to be used for models. 
-Data retived vie JSON or database querries can be turned into  objects without 
+Data retrived vie JSON or database querries can be turned into  objects without 
 creating constructors for each model.
 The integrity of the data must be ensured by the calling code 
  
@@ -22,7 +22,7 @@ should be private.
 
 Using injectaion allows setting protected object properties when the object is 
 created.
-
+    
 Methods
 --------------------------------------------------------------------------------
 
@@ -32,20 +32,20 @@ Creates a new  instance and injects the properties from an array.
 The properies names are used as array keys
 Any additional parameters are passed to the class constructor.
 #### Implemantation
- - Implementing classes should *not* allow injecting *unknown properties*
- - *Private* properties should *not* be injected
- - * Always* return an instance of the *class* which was *called*.
+ - Implementing classes should not allow injecting unknown properties
+ - Private properties should not be injected
+ - Always return an instance of the class which was called.
  - additional arguments should be passed to the class constructor
  
 #### Parameters
  - `array $properties` Associative array containig the desired properties.
- - mixed $arg_1 ... $arg_n Arguments for the class constructor.
+ - `mixed` $arg_1 ... $arg_n Arguments for the class constructor.
  
 #### Returns
 `IInject` instance of the called class
 
 
-### public static array **extract()** ###
+### public static array extract()
 Returns an objects properties as array.
 The properies names are used as array keys.
 
@@ -59,6 +59,7 @@ The properies names are used as array keys.
 Source
 --------------------------------------------------------------------------------
 /*/
+namespace daliaIT\dalia\inject;
 interface IInject
 {    
     #:this

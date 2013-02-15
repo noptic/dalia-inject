@@ -1,0 +1,160 @@
+{
+    "hash": "1710eebf5236bf3ee259feea0eec4c6b",
+    "packages": [
+        {
+            "name": "dalia-it/clayball",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/noptic/clayball.git",
+                "reference": "e4ab2ff9f105c905c8b06101a8133074319f416c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/noptic/clayball/zipball/e4ab2ff9f105c905c8b06101a8133074319f416c",
+                "reference": "e4ab2ff9f105c905c8b06101a8133074319f416c",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/console": "*",
+                "symfony/yaml": "*"
+            },
+            "time": "2013-02-07 18:54:00",
+            "type": "library",
+            "extra": {
+                "dalia-it": {
+                    "clayball": {
+                        "bin": "/bin",
+                        "applications": {
+                            "clayball": {
+                                "commands": {
+                                    "build": "daliaIT\\clayball\\command\\Build"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Anan",
+                    "email": "oliver@ananit.de"
+                }
+            ],
+            "description": "Turns controller classes into executable scripts."
+        },
+        {
+            "name": "dalia-it/rough",
+            "version": "v0.0.1-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/noptic/rough.git",
+                "reference": "v0.0.1-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/noptic/rough/zipball/v0.0.1-alpha1",
+                "reference": "v0.0.1-alpha1",
+                "shasum": ""
+            },
+            "require": {
+                "dalia-it/clayball": "dev-master"
+            },
+            "time": "2013-02-14 16:44:16",
+            "bin": [
+                "bin/rough"
+            ],
+            "type": "library",
+            "extra": {
+                "dalia-it": {
+                    "rough": {
+                        "build": {
+                            "source": "src/",
+                            "output": "src/"
+                        }
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "daliaIT\\rough": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Anan",
+                    "email": "oliver@ananit.de"
+                }
+            ],
+            "description": "Adds macro support to composer"
+        },
+        {
+            "name": "symfony/console",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console",
+                "reference": "f65e34d058f0990a724f78e8d091dc0a20e439ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/f65e34d058f0990a724f78e8d091dc0a20e439ac",
+                "reference": "f65e34d058f0990a724f78e8d091dc0a20e439ac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "2013-01-31 21:39:01",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "dalia-it/rough": 15
+    }
+}

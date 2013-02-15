@@ -21,10 +21,10 @@ PHP < 5.4 use the "import" macro, provided by the package "dalia-it/rough"
 Source
 --------------------------------------------------------------------------------
 /*/
-namespace daliaIT\co3;
+namespace daliaIT\dalia\inject;
 use ReflectionClass;
 #@trait Inject#
-final class Inject  
+final class Inject
 #@# 
 {
     public static function inject($properties){
