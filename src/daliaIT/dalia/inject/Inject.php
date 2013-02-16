@@ -22,12 +22,13 @@ Source
 --------------------------------------------------------------------------------
 /*/
 namespace daliaIT\dalia\inject;
-use ReflectionClass;
 #@trait Inject#
 final class Inject
 #@# 
 {
-    public static function inject($properties){
+    private static $injectableProperties = array();
+    
+    public static function inject($properties = array()){
         $class = get_called_class();
         $args = func_get_args();
         array_shift($args);
@@ -38,7 +39,7 @@ final class Inject
             $instance = new $class();
         }            
         if($properties){
-            foreach( static::getInjectableProperties() as $property ){
+            foreach( static::getInjectablePropertyNames() as $property ){
                 if( array_key_exists( $property, $properties ) ){
                     $instance->$property = $properties[$property];
                 }
@@ -52,14 +53,29 @@ final class Inject
     
     public function extract(){
         $result = array();
-        foreach( static::getInjectableProperties() as $property ){
+        foreach( static::getInjectablePropertyNames() as $property ){
             $result[$property] = $this->$property;
         }
         return $result;
     }
     
-    protected static function getInjectableProperties(){
-        return array_keys( get_class_vars( get_called_class() ) );
+    public static function getInjectablePropertyNames(){
+        $class = get_called_class();
+        $names = \daliaIT\dalia\inject\ReflectionCache::getInjectablePropertyNames($class);
+        if($names !== null){
+            return $names;
+        } else {
+            $names = array();
+            $reflect = new \ReflectionClass($class);
+            foreach ($reflect->getProperties(\ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED) 
+                as $property) 
+            {
+                $names[] = $property->getName();
+            }
+            \daliaIT\dalia\inject\ReflectionCache::setInjectablePropertyNames($class, $names);
+            return $names;
+        }
     }
+
 }
 ?>

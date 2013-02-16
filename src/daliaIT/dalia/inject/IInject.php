@@ -63,10 +63,13 @@ namespace daliaIT\dalia\inject;
 interface IInject
 {    
     #:this
-    static function inject($properties);
+    static function inject($properties=array());
     
     #:array
     function extract();
+    
+    #:array
+    static function getInjectablePropertyNames();
 
 }
 ?>

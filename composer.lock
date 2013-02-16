@@ -1,5 +1,5 @@
 {
-    "hash": "1710eebf5236bf3ee259feea0eec4c6b",
+    "hash": "9a516cc954b1d12d7aedc064db51963d",
     "packages": [
         {
             "name": "dalia-it/clayball",
@@ -54,22 +54,22 @@
         },
         {
             "name": "dalia-it/rough",
-            "version": "v0.0.1-alpha1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/noptic/rough.git",
-                "reference": "v0.0.1-alpha1"
+                "reference": "8ff9aabd7fa7ae1caa124dec09c3b8c5892d58cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/noptic/rough/zipball/v0.0.1-alpha1",
-                "reference": "v0.0.1-alpha1",
+                "url": "https://api.github.com/repos/noptic/rough/zipball/8ff9aabd7fa7ae1caa124dec09c3b8c5892d58cd",
+                "reference": "8ff9aabd7fa7ae1caa124dec09c3b8c5892d58cd",
                 "shasum": ""
             },
             "require": {
                 "dalia-it/clayball": "dev-master"
             },
-            "time": "2013-02-14 16:44:16",
+            "time": "2013-02-14 23:42:23",
             "bin": [
                 "bin/rough"
             ],
@@ -155,6 +155,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "dalia-it/rough": 15
+        "dalia-it/rough": 20
     }
 }
